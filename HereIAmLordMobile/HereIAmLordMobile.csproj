@@ -8,5 +8,42 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
     <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.0.35" />
+    <PackageReference Include="PCLCrypto" Version="2.0.147" />
+    <PackageReference Include="IdentityModel" Version="4.1.1" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.6.0" />
+    <PackageReference Include="SlideOverKit" Version="2.1.6.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Animations\" />
+    <Folder Include="Animations\Base\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Behaviors\" />
+    <Folder Include="Behaviors\Base\" />
+    <Folder Include="Effects\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\User\" />
+    <Folder Include="Models\Token\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Dependency\" />
+    <Folder Include="Services\Dialog\" />
+    <Folder Include="Services\FixUri\" />
+    <Folder Include="Services\Identity\" />
+    <Folder Include="Services\RequestProvider\" />
+    <Folder Include="Services\Navigation\" />
+    <Folder Include="Services\Settings\" />
+    <Folder Include="Services\OpenUrl\" />
+    <Folder Include="TinyIoC\" />
+    <Folder Include="Triggers\" />
+    <Folder Include="Validations\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="ViewModels\Base\" />
+    <Folder Include="Services\User\" />
+    <Folder Include="Models\Navigation\" />
   </ItemGroup>
 </Project>
