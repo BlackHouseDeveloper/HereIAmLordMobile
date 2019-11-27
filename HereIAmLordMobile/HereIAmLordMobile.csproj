@@ -45,5 +45,8 @@
     <Folder Include="ViewModels\Base\" />
     <Folder Include="Services\User\" />
     <Folder Include="Models\Navigation\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Templates\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
 </Project>

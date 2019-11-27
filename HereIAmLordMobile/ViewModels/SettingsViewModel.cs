@@ -94,20 +94,20 @@ namespace HereIAmLordMobile.ViewModels
             }
         }
 
-        public string TitleAllowGpsLocation
-        {
-            get { return !AllowGpsLocation ? "GPS Location Disabled" : "GPS Location Enabled"; }
-        }
+        //public string TitleAllowGpsLocation
+        //{
+        //    get { return !AllowGpsLocation ? "GPS Location Disabled" : "GPS Location Enabled"; }
+        //}
 
-        public string DescriptionAllowGpsLocation
-        {
-            get
-            {
-                return !AllowGpsLocation
-                    ? "When disabling location, you won't receive location campaigns based upon your location."
-                        : "When enabling location, you'll receive location campaigns based upon your location.";
-            }
-        }
+        //public string DescriptionAllowGpsLocation
+        //{
+        //    get
+        //    {
+        //        return !AllowGpsLocation
+        //            ? "When disabling location, you won't receive location campaigns based upon your location."
+        //                : "When enabling location, you'll receive location campaigns based upon your location.";
+        //    }
+        //}
 
         public string GpsWarningMessage
         {
@@ -202,7 +202,7 @@ namespace HereIAmLordMobile.ViewModels
 
         //public ICommand ToggleSendLocationCommand => new Command(async () => await ToggleSendLocationAsync());
 
-        public ICommand ToggleAllowGpsLocationCommand => new Command(ToggleAllowGpsLocation);
+        //public ICommand ToggleAllowGpsLocationCommand => new Command(ToggleAllowGpsLocation);
 
         private async Task ToggleMockServicesAsync()
         {
@@ -251,11 +251,11 @@ namespace HereIAmLordMobile.ViewModels
         //    }
         //}
 
-        private void ToggleAllowGpsLocation()
-        {
-            RaisePropertyChanged(() => TitleAllowGpsLocation);
-            RaisePropertyChanged(() => DescriptionAllowGpsLocation);
-        }
+        //private void ToggleAllowGpsLocation()
+        //{
+        //    RaisePropertyChanged(() => TitleAllowGpsLocation);
+        //    RaisePropertyChanged(() => DescriptionAllowGpsLocation);
+        //}
 
         private void UpdateUseAzureServices()
         {

@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Globalization;
+using System.Threading.Tasks;
+using HereIAmLordMobile.Services.Settings;
+using HereIAmLordMobile.ViewModels.Base;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -6,11 +11,22 @@ namespace HereIAmLordMobile
 {
     public partial class App : Application
     {
+        ISettingsService _settingsService;
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            InitApp();
+
+            
+        }
+
+        private void InitApp()
+        {
+            _settingsService = ViewModelLocator.Resolve<ISettingsService>();
+            if (!_settingsService.UseMocks)
+                ViewModelLocator.UpdateDependencies(_settingsService.UseMocks);
         }
 
         protected override void OnStart()
