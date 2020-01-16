@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Globalization;
 using System.Threading.Tasks;
@@ -11,6 +11,7 @@ namespace HereIAmLordMobile
 {
     public partial class App : Application
     {
+        public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
         ISettingsService _settingsService;
 
         public App()

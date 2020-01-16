@@ -196,7 +196,7 @@ namespace HereIAmLordMobile.ViewModels
 
         public bool UserIsLogged => !string.IsNullOrEmpty(_settingsService.AuthAccessToken);
 
-        public ICommand ToggleMockServicesCommand => new Command(async () => await ToggleMockServicesAsync());
+       // public ICommand ToggleMockServicesCommand => new Command(async () => await ToggleMockServicesAsync());
 
         public ICommand ToggleFakeLocationCommand => new Command(ToggleFakeLocationAsync);
 
@@ -204,30 +204,30 @@ namespace HereIAmLordMobile.ViewModels
 
         //public ICommand ToggleAllowGpsLocationCommand => new Command(ToggleAllowGpsLocation);
 
-        private async Task ToggleMockServicesAsync()
-        {
-            ViewModelLocator.UpdateDependencies(!UseAzureServices);
-            RaisePropertyChanged(() => TitleUseAzureServices);
-            RaisePropertyChanged(() => DescriptionUseAzureServices);
+        //private async Task ToggleMockServicesAsync()
+        //{
+        //    ViewModelLocator.UpdateDependencies(!UseAzureServices);
+        //    RaisePropertyChanged(() => TitleUseAzureServices);
+        //    RaisePropertyChanged(() => DescriptionUseAzureServices);
 
-            var previousPageViewModel = NavigationService.PreviousPageViewModel;
-            if (previousPageViewModel != null)
-            {
-                if (previousPageViewModel is MainViewModel)
-                {
-                    // Slight delay so that page navigation isn't instantaneous
-                    await Task.Delay(1000);
-                    if (UseAzureServices)
-                    {
-                        _settingsService.AuthAccessToken = string.Empty;
-                        _settingsService.AuthIdToken = string.Empty;
+        //    var previousPageViewModel = NavigationService.PreviousPageViewModel;
+        //    if (previousPageViewModel != null)
+        //    {
+        //        if (previousPageViewModel is MainViewModel)
+        //        {
+        //            // Slight delay so that page navigation isn't instantaneous
+        //            await Task.Delay(1000);
+        //            if (UseAzureServices)
+        //            {
+        //                _settingsService.AuthAccessToken = string.Empty;
+        //                _settingsService.AuthIdToken = string.Empty;
 
-                        await NavigationService.NavigateToAsync<LoginViewModel>(new LogoutParameter { Logout = true });
-                        await NavigationService.RemoveBackStackAsync();
-                    }
-                }
-            }
-        }
+        //                await NavigationService.NavigateToAsync<LoginViewModel>(new LogoutParameter { Logout = true });
+        //                await NavigationService.RemoveBackStackAsync();
+        //            }
+        //        }
+        //    }
+        //}
 
         private void ToggleFakeLocationAsync()
         {

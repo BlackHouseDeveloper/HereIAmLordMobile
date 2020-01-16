@@ -10,7 +10,7 @@
              viewModelBase:ViewModelLocator.AutoWireViewModel="true">
     <ContentPage.Title>
         <OnPlatform x:TypeArguments="x:String">
-            <On Platform="iOS" Value="eShop on Containers" />
+            <On Platform="iOS" Value="Here I Am Lord" />
         </OnPlatform>
     </ContentPage.Title>
     <ContentPage.Resources>
@@ -180,7 +180,6 @@
 					<Entry.Style>
                         <OnPlatform x:TypeArguments="Style">
                             <On Platform="iOS, Android" Value="{StaticResource EntryStyle}" />
-                            <On Platform="UWP, WinRT, WinPhone" Value="{StaticResource UwpEntryStyle}" />
                         </OnPlatform>
                     </Entry.Style>
                     <Entry.Behaviors>
@@ -209,7 +208,6 @@
                     <Entry.Style>
                         <OnPlatform x:TypeArguments="Style">
                             <On Platform="iOS, Android" Value="{StaticResource EntryStyle}" />
-                            <On Platform="UWP, WinRT, WinPhone" Value="{StaticResource UwpEntryStyle}" />
                         </OnPlatform>
                     </Entry.Style>
 					<Entry.Behaviors>
@@ -271,7 +269,6 @@
                 <Image.Source>
                     <OnPlatform x:TypeArguments="ImageSource">
                         <On Platform="iOS, Android" Value="banner.png" />
-                        <On Platform="UWP, WinRT, WinPhone" Value="Assets\banner.png" />
                     </OnPlatform>
                 </Image.Source>
             </Image>
@@ -319,7 +316,6 @@
                     <Image.Source>
                         <OnPlatform x:TypeArguments="ImageSource">
                             <On Platform="iOS, Android" Value="app_settings" />
-                            <On Platform="UWP, WinRT, WinPhone" Value="Assets/app_settings.png" />
                         </OnPlatform>
                     </Image.Source>
                 </Image>
@@ -359,7 +355,6 @@
             <ActivityIndicator.WidthRequest>
                 <OnPlatform x:TypeArguments="x:Double">
                     <On Platform="iOS, Android" Value="100" />
-                    <On Platform="UWP, WinRT, WinPhone" Value="400" />
                 </OnPlatform>
             </ActivityIndicator.WidthRequest>
         </ActivityIndicator>

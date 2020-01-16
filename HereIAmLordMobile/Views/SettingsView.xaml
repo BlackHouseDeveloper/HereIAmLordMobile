@@ -94,7 +94,6 @@
                     <animations:FadeInAnimation.Duration>
                         <OnPlatform x:TypeArguments="x:String">
                             <On Platform="iOS" Value="0" />
-                            <On Platform="Android, UWP, WinRT, WinPhone" Value="500" />
                         </OnPlatform>
                     </animations:FadeInAnimation.Duration>
                 </animations:FadeInAnimation>

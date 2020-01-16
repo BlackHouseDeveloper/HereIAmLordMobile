@@ -6,15 +6,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991477" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Acr.UserDialogs" Version="7.0.35" />
     <PackageReference Include="PCLCrypto" Version="2.0.147" />
     <PackageReference Include="IdentityModel" Version="4.1.1" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="4.6.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
     <PackageReference Include="SlideOverKit" Version="2.1.6.2" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.4.0.43" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="17.4.0.43" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="17.4.0.43" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRotator" Version="17.4.0.43" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.4.0.43" />
+    <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.1.1" />
+    <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Animations\" />
@@ -35,7 +43,6 @@
     <Folder Include="Services\FixUri\" />
     <Folder Include="Services\Identity\" />
     <Folder Include="Services\RequestProvider\" />
-    <Folder Include="Services\Navigation\" />
     <Folder Include="Services\Settings\" />
     <Folder Include="Services\OpenUrl\" />
     <Folder Include="TinyIoC\" />
@@ -48,5 +55,63 @@
     <Folder Include="Views\" />
     <Folder Include="Views\Templates\" />
     <Folder Include="Converters\" />
+    <Folder Include="ViewModels\Admin\" />
+    <Folder Include="Views\Admin\" />
+    <Folder Include="Views\Onboarding\" />
+    <Folder Include="ViewModels\Onboarding\" />
+    <Folder Include="Models\Onboarding\" />
+    <Folder Include="Behaviors\Onboarding\" />
+    <Folder Include="Views\ErrorandEmpty\" />
+    <Folder Include="ViewModels\ErrorandEmpty\" />
+    <Folder Include="Images\" />
+    <Folder Include="Views\Social\" />
+    <Folder Include="ViewModels\Social\" />
+    <Folder Include="Views\Social\Templates\" />
+    <Folder Include="Views\Profile\" />
+    <Folder Include="ViewModels\Profile\" />
+    <Folder Include="ViewModels\Settings\" />
+    <Folder Include="Views\Settings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Animations\LoginView.xaml.cs" />
+    <Compile Remove="Views\LogInView\Styles.xaml.cs" />
+    <Compile Remove="Views\LogInView\LoginPage.xaml.cs" />
+    <Compile Remove="Views\MainView.xaml.cs" />
+    <Compile Remove="Views\ProfileView.xaml.cs" />
+    <Compile Remove="Views\CustomNavigationView.xaml.cs" />
+    <Compile Remove="Views\SettingsView.xaml.cs" />
+    <Compile Remove="MainPage.xaml.cs" />
+    <Compile Remove="Services\Navigation\INavigationService.cs" />
+    <Compile Remove="Services\Navigation\NavigationService.cs" />
+    <Compile Remove="Views\LogInView\EmailEntry.xaml.cs" />
+    <Compile Remove="ViewModels\SettingsViewModel.cs" />
+    <Compile Remove="ViewModels\ProfileViewModel.cs" />
+    <Compile Remove="ViewModels\MainViewModel.cs" />
+    <Compile Remove="ViewModels\LogInView\LoginPageViewModel.cs" />
+    <Compile Remove="ViewModels\LogInView\LoginViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Images\NoInternet.svg" />
+    <None Remove="Images\SomethingWentWrong.svg" />
+    <None Remove="Services\Navigation\INavigationService.cs~" />
+    <None Remove="Services\Navigation\NavigationService.cs~" />
+    <None Remove="ViewModels\MainViewModel.cs~" />
+    <None Remove="ViewModels\SettingsViewModel.cs~" />
+    <None Remove="ViewModels\LoginViewModel.cs~" />
+    <None Remove="ViewModels\ProfileViewModel.cs~" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\LogInView\EmailEntry.xaml" />
+    <EmbeddedResource Remove="Views\LogInView\Styles.xaml" />
+    <EmbeddedResource Remove="Views\MainView.xaml" />
+    <EmbeddedResource Remove="Views\ProfileView.xaml" />
+    <EmbeddedResource Remove="Views\CustomNavigationView.xaml" />
+    <EmbeddedResource Remove="Views\SettingsView.xaml" />
+    <EmbeddedResource Remove="MainPage.xaml" />
+    <EmbeddedResource Remove="Views\LogInView\LoginPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\NoInternet.svg" />
+    <EmbeddedResource Include="Images\SomethingWentWrong.svg" />
   </ItemGroup>
 </Project>

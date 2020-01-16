@@ -46,13 +46,13 @@ namespace HereIAmLordMobile.ViewModels
             IsBusy = false;
         }
 
-        private async Task LogoutAsync()
+        private Task LogoutAsync()
         {
             IsBusy = true;
 
             // Logout
-            await NavigationService.NavigateToAsync<LoginViewModel>(new LogoutParameter { Logout = true });
-            await NavigationService.RemoveBackStackAsync();
+            //await NavigationService.NavigateToAsync<LoginViewModel>(new LogoutParameter { Logout = true });
+            //await NavigationService.RemoveBackStackAsync();
 
             IsBusy = false;
         }

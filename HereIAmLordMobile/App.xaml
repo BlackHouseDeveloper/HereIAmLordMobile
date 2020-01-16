@@ -1,11 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:converters="clr-namespace:HereIAmLordMobile.Converters;assembly=HereIAmLordMobile"
              xmlns:behaviors="clr-namespace:HereIAmLordMobile.Behaviors;assembly=HereIAmLordMobile" xmlns:forms="http://xamarin.com/schemas/2014/forms"
+             xmlns:themes = "clr-namespace:HereIAmLordMobile.Themes;assembly=HereIAmLordMobile"
              x:Class="HereIAmLordMobile.App">
     <Application.Resources>
         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <themes:LightTheme />
+            </ResourceDictionary.MergedDictionaries >
 
             <!-- COLORS -->
             <Color x:Key="WhiteColor">#ffffff</Color>
@@ -99,7 +103,6 @@
                         x:TypeArguments="x:String">
                 <On Platform="iOS" Value="SourceSansPro-Regular" />
                 <On Platform="Android" Value="SourceSansPro-Regular.ttf#Source Sans Pro" />
-                <On Platform="UWP, WinRT, WinPhone" Value="Assets/Fonts/SourceSansPro-Regular.ttf#Source Sans Pro" />
             </OnPlatform>
             
             <OnPlatform x:TypeArguments="x:Double"

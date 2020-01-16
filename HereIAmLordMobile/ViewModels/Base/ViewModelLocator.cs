@@ -5,7 +5,6 @@ using HereIAmLordMobile.Services.Dependency;
 using HereIAmLordMobile.Services.Dialog;
 using HereIAmLordMobile.Services.FixUri;
 using HereIAmLordMobile.Services.Identity;
-using HereIAmLordMobile.Services.Navigation;
 using HereIAmLordMobile.Services.OpenUrl;
 using HereIAmLordMobile.Services.RequestProvider;
 using HereIAmLordMobile.Services.Settings;
@@ -43,16 +42,16 @@ namespace HereIAmLordMobile.ViewModels.Base
             //_container.Register<BasketViewModel>();
             //_container.Register<CatalogViewModel>();
             //_container.Register<CheckoutViewModel>();
-            _container.Register<LoginViewModel>();
-            _container.Register<MainViewModel>();
+           // _container.Register<LoginViewModel>();
+            //_container.Register<MainViewModel>();
             //_container.Register<OrderDetailViewModel>();
-            _container.Register<ProfileViewModel>();
-            _container.Register<SettingsViewModel>();
+            //_container.Register<ProfileViewModel>();
+           // _container.Register<SettingsViewModel>();
             //_container.Register<CampaignViewModel>();
             //_container.Register<CampaignDetailsViewModel>();
 
             // Services - by default, TinyIoC will register interface registrations as singletons.
-            _container.Register<INavigationService, NavigationService>();
+            //_container.Register<INavigationService, NavigationService>();
             _container.Register<IDialogService, DialogService>();
             _container.Register<IOpenUrlService, OpenUrlService>();
             _container.Register<IIdentityService, IdentityService>();

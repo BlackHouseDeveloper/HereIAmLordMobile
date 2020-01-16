@@ -1,4 +1,11 @@
-﻿using System;
+using Syncfusion.ListView.XForms.iOS;
+using Syncfusion.SfRotator.XForms.iOS;
+using Syncfusion.XForms.iOS.Core;
+using Syncfusion.XForms.iOS.Graphics;
+using  Syncfusion.XForms.iOS.Graphics;
+using Syncfusion.XForms.iOS.Border;
+using Syncfusion.XForms.iOS.Buttons;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -24,6 +31,12 @@ namespace HereIAmLordMobile.iOS
         {
             Xamarin.Calabash.Start();
             global::Xamarin.Forms.Forms.Init();
+            SfListViewRenderer.Init();
+            Core.Init();
+            SfRotatorRenderer.Init();
+            SfGradientViewRenderer.Init();
+            SfBorderRenderer.Init();
+            SfButtonRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

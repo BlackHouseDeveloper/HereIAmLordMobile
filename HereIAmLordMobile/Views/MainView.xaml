@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="HereIAmLordMobile.Views.MainView">
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:HereIAmLordMobile.Views" x:Class="HereIAmLordMobile.Views.MainView">
     <!--Pages can be added as references or inline-->
     <TabbedPage.Title>
         <OnPlatform x:TypeArguments="x:String">
@@ -16,18 +15,17 @@
             <ToolbarItem.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS, Android" Value="app_settings" />
-                    <On Platform="UWP, WinRT, WinPhone" Value="Assets/app_settings.png" />
                 </OnPlatform>
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
+    
     <!-- CATALOG -->
     <views:CatalogView  
         x:Name="HomeView">
         <views:CatalogView.Icon>
             <OnPlatform x:TypeArguments="FileImageSource">
                 <On Platform="iOS, Android" Value="menu_filter" />
-                <On Platform="UWP, WinRT, WinPhone" Value="Assets\menu_filter.png" />
             </OnPlatform>
         </views:CatalogView.Icon>
     </views:CatalogView>

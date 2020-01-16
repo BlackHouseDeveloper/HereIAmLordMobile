@@ -1,6 +1,5 @@
 ﻿using System.Threading.Tasks;
 using HereIAmLordMobile.Services.Dialog;
-using HereIAmLordMobile.Services.Navigation;
 using HereIAmLordMobile.Services.Settings;
 
 
@@ -9,8 +8,7 @@ namespace HereIAmLordMobile.ViewModels.Base
     public abstract class ViewModelBase : ExtendedBindableObject
     {
         protected readonly IDialogService DialogService;
-        protected readonly INavigationService NavigationService;
-
+        
         private bool _isBusy;
 
         public bool IsBusy
@@ -30,7 +28,7 @@ namespace HereIAmLordMobile.ViewModels.Base
         public ViewModelBase()
         {
             DialogService = ViewModelLocator.Resolve<IDialogService>();
-            NavigationService = ViewModelLocator.Resolve<INavigationService>();
+            
 
             var settingsService = ViewModelLocator.Resolve<ISettingsService>();
 
